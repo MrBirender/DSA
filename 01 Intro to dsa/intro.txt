@@ -1,0 +1,10 @@
+ # what is Data Structure?
+ Answer: Data Structure is the way of storing the data in an efficent way so that can be used efficently, later.
+ like: in the kitchen labeling all the boxes with the ingredient name.
+
+
+ # what is alogrithum ?
+ Answer:  It is a step by step process or set of rules which is used to retrieve, search, sort, delete , insert the data with the goal of doing this all in an faster and efficent way (using less memory.)
+
+
+ # Find the way to start working on leet code with specific data structure and algorithms.
