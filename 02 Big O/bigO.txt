@@ -1,0 +1,80 @@
+
+# we need some way to measure the better perfoming code.
+
+1. Time complexity - Think of it like an stopwatch is measuring the time when the peace of code is running. but in this senario the faster computer and a slow computer can give deciving results because of their hardware.
+#so we measure TC in number of operations perfomed in that code.
+
+2. Space complexity - While comparing two pieces of code when might be finshing fast but taking more space in memory but other one is taking longer than that may be a full  minute but using less space.
+
+# it depends how we want our code to perform :
+ Either we are more concern about space or the memory.  
+
+# To measure the performance of a code , we have three greek letter to denote their perofmance:
+
+Omega: Ω, ω
+Theta: Θ, θ
+Omicron: Ο, ο
+
+for example: const arr = [1, 2, 3, 4, 5, 6]
+arr[0] = best case if we need one => Omega
+
+arr[3] = avergae case if we need 4 => Theta
+
+arr[5] = worst case if we need 6 => Omicron
+
+note: Omicron only mesures the worst case and also know as "Big O"
+
+# To measure the big O we right it like:
+o(n) => value of n and number of operations are same.
+like a in simple for loop.
+
+
+#Drop constants:
+o(n + n) => o(2n) => o(n)
+simple like a function having two loops but not nested:
+
+# O(n²) - Press Alt + 0178 (hold Alt and type 0178 on the numeric keypad) → ²
+if nested loop are there then number of operations will be doubled to the value of n.
+
+# drop non-dominants:
+O(n² + n) => O(n²)
+
+# O(1) The most efficent or Constant Times:
+ex: function add(n){
+    return n + n + n
+}
+
+operations won't change as n chnages it will always be o(1).
+represneted as a flat line on the graph:
+
+# O(log n): it is second most efficent and powerfull as well:
+ex: const arr = [1, 2, 3, 4, 5 ,6 ,7, 8]
+
+if i need two out of this: 
+** arr has to be sorted:
+apply divide and conquer and i will get the result in O(log n operations):
+
+O(log 2ⁿ) = steps to get the result
+ex: n is number of input or elements in the array
+then it means how many times i can divide the number into equal parts:
+
+
+# different terms for input:
+
+function someFn(a, b){
+    for loop{
+ console.log(somthing)
+    }
+
+    for loop {
+ console.log(somthing)
+    }
+}
+
+O(a) + O(b) => O(a + b)// can't simplyfy because number might be different a could be one and b could be a billion:
+
+
+
+To Explore more and conclude the learning: 
+https://www.bigocheatsheet.com
+solve the quiz in the course.
