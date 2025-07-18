@@ -54,15 +54,47 @@ class LinkedList {
 	// WRITE THE REMOVEDUPLICATES METHOD HERE // 
 	removeDuplicates(){
         let current = this.head
-        let runner = this.head
+        
+        while(current){
+            let runner = current
 
-       while(current !== null ){
-         while(runner !== null){
-            if(current === runner){
-                runner.next
+            while(runner.next){
+                if(runner.next.value === current.value){
+                    let removedNode = runner.next
+                    runner.next = runner.next.next
+                    removedNode.next = null
+                    this.length--
+                }else{
+                    runner = runner.next
+                }
+
             }
-         }
-       }
+            current = current.next
+        } 
+    }
+
+    // removeduplicateusing set
+    removeDuplicatesWithSet(){
+        let current = this.head
+        let pre = null
+
+        let seen = new Set()
+
+        while(current){
+            if(seen.has(current.value)){
+                let removeNode = current
+                pre.next = current.next
+                current = current.next
+                removeNode.next = null
+                this.length--
+            }else{
+                seen.add(current.value)
+                pre = current
+                current = current.next
+            }
+
+            // current = current.next
+        }
     }
 
 }
@@ -81,7 +113,7 @@ myLinkedList.push(5);
 console.log("Original list:");
 myLinkedList.printList();
 
-myLinkedList.removeDuplicates();
+myLinkedList.removeDuplicatesWithSet();
 
 console.log("\nList after removing duplicates:");
 myLinkedList.printList();
