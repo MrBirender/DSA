@@ -105,7 +105,7 @@ myLinkedList.push(5);
 console.log("Original list:");
 myLinkedList.printList();
 
-myLinkedList.removeDuplicates();
+// myLinkedList.removeDuplicatesWithSet();
 
 console.log("\nList after removing duplicates:");
 myLinkedList.printList();
