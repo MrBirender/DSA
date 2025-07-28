@@ -52,17 +52,41 @@ class LinkedList {
 	}
 	
 	// WRITE THE REMOVEDUPLICATES METHOD HERE // 
-	removeDuplicates(){
-        let current = this.head
-        let runner = this.head
+	// removeDuplicates(){
+    //    let current = this.head;
 
-       while(current !== null ){
-         while(runner !== null){
-            if(current === runner){
-                runner.next
-            }
+    //    while(current){
+    //     let runner = current;
+
+    //     while(runner.next){
+    //         if(current.value === runner.next.value){
+    //             runner.next = runner.next.next
+    //             this.length--
+    //         }else{
+    //             runner = runner.next
+    //         }
+            
+    //     }
+    //     current = current.next
+    //    }
+    // }
+
+        removeDuplicates(){
+         let current = this.head
+         
+         while(current.next){
+             let runner = this.head
+             
+             while(runner.next){
+                 if(current.value === runner.value){
+                     current.next = runner.next
+                 }else{
+                     runner = runner.next
+                 }
+             }
+             
+             current = current.next
          }
-       }
     }
 
 }
